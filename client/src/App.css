@@ -13,3 +13,56 @@
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
 }
+
+body{
+  background-color: #f3f3f3;
+}
+
+.quillContainer .ql-editor{
+  width: 8.5in;
+  min-height:11in;
+  padding:1in;
+  margin:1rem;
+  /* box-shadow: 0 0 5px 0 rgba(0,0,0,0.5); */
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;  background-color: white;
+}
+
+.quillContainer .ql-container.ql-snow{
+  border:none;
+  display: flex;
+  justify-content: center;
+}
+
+.quillContainer .ql-toolbar.ql-snow{
+  border:none;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+@page {
+  margin: 1in;
+}
+
+@media print {
+  body{
+    background: none;
+  }
+
+  .quillContainer .ql-editor{
+    width: 6.5in;
+    min-height:9in;
+    padding:0;
+    margin:0;
+    box-shadow: none;
+    align-self: flex-start;
+  }
+
+  .quillContainer .ql-toolbar.ql-snow{
+    display: none;
+  }
+}

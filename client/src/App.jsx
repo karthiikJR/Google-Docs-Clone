@@ -1,7 +1,22 @@
 import "./App.css";
+import QuillEditor from "./QuillEditor";
+import {
+	BrowserRouter as Router,
+	Routes,
+	Route,
+	Navigate,
+} from "react-router-dom";
+import { v4 as uuidV4 } from "uuid";
 
 function App() {
-	return <div> hello world</div>;
+	return (
+		<Router>
+			<Routes>
+				<Route path="/" element={<Navigate to={`/documents/${uuidV4()}`} />} />
+				<Route path="/documents/:id" element={<QuillEditor />} />
+			</Routes>
+		</Router>
+	);
 }
 
 export default App;
